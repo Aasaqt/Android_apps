@@ -1,3 +1,6 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -50,8 +53,10 @@
         android:text="NEXT"
         android:textSize="9pt"
         android:padding="2pt"
+        android:layout_below="@id/name_person"
         android:textColor="#ff1ccc13"
         android:layout_alignParentBottom="true"
         android:id="@+id/next"
         />
 </RelativeLayout>
+</ScrollView>

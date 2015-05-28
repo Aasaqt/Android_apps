@@ -3,24 +3,25 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_second">second</string>
-    <string name="title_activity_third">third</string>
-    <string name="title_activity_fourth">fourth</string>
-    <string name="title_activity_fifth">fifth</string>
-    <string name="title_activity_sixth">sixth</string>
-    <string name="title_activity_seventh">seventh</string>
-    <string name="title_activity_eighth">eighth</string>
-    <string name="title_activity_ninth">ninth</string>
-    <string name="title_activity_tenth">tenth</string>
-    <string name="title_activity_eleventh">eleventh</string>
-    <string name="title_activity_eleventh2">eleventh2</string>
-    <string name="title_activity_twelvth">twelvth</string>
-    <string name="title_activity_twelvth2">twelvth2</string>
-    <string name="title_activity_thirteenth">thirteenth</string>
-    <string name="title_activity_fourteenth">fourteenth</string>
-    <string name="title_activity_thirteenth2">thirteenth2</string>
-    <string name="title_activity_fifteenth">fifteenth</string>
-    <string name="title_activity_sixteenth">sixteenth</string>
-    <string name="title_activity_sixteenth2">sixteenth2</string>
-    <string name="title_activity_seventeenth">seventeenth</string>
+    <string name="title_activity_second">Name</string>
+    <string name="title_activity_third">Address</string>
+    <string name="title_activity_fourth">Email id</string>
+    <string name="title_activity_fifth">Phone no</string>
+    <string name="title_activity_sixth">Ownership</string>
+    <string name="title_activity_seventh">How Long...</string>
+    <string name="title_activity_eighth">Who is...</string>
+    <string name="title_activity_ninth">Electricity</string>
+    <string name="title_activity_tenth">Water Problems</string>
+    <string name="title_activity_eleventh">Landlord Fights</string>
+
+    <string name="title_activity_twelvth">Living Conditions</string>
+
+    <string name="title_activity_thirteenth">Facilities</string>
+    <string name="title_activity_fourteenth">No. of rooms</string>
+
+    <string name="title_activity_fifteenth">Neighbours</string>
+    <string name="title_activity_sixteenth">Locality</string>
+
+    <string name="title_activity_seventeenth">Remarks</string>
+    <string name="title_activity_rent">Rent</string>
 </resources>

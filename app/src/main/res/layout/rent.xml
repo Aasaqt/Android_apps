@@ -16,7 +16,7 @@
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Number of rooms : "
+        android:text="Rent"
         android:textSize="30dp"
         android:id="@+id/question"
         android:layout_below="@id/header"
@@ -25,7 +25,8 @@
     <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/rooms"
+        android:id="@+id/rent"
+        android:hint="optional"
         android:inputType="number"
         android:layout_below="@id/question"
         android:layout_marginTop="25dp"

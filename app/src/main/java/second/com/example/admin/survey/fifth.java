@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.WindowManager;
 import android.widget.Button;
 
 public class fifth extends ActionBarActivity implements OnClickListener{
@@ -17,6 +18,9 @@ public class fifth extends ActionBarActivity implements OnClickListener{
         setContentView(R.layout.activity_fifth);
         Button button=(Button)findViewById(R.id.next);
         button.setOnClickListener(this);
+        getWindow().setSoftInputMode(
+                WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN
+        );
     }
 
     public void onClick(View v) {

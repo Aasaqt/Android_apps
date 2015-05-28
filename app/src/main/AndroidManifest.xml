@@ -56,18 +56,12 @@
             android:name=".eleventh"
             android:label="@string/title_activity_eleventh" >
         </activity>
-        <activity
-            android:name=".eleventh2"
-            android:label="@string/title_activity_eleventh2" >
-        </activity>
+
         <activity
             android:name=".twelvth"
             android:label="@string/title_activity_twelvth" >
         </activity>
-        <activity
-            android:name=".twelvth2"
-            android:label="@string/title_activity_twelvth2" >
-        </activity>
+
         <activity
             android:name=".thirteenth"
             android:label="@string/title_activity_thirteenth" >
@@ -76,10 +70,7 @@
             android:name=".fourteenth"
             android:label="@string/title_activity_fourteenth" >
         </activity>
-        <activity
-            android:name=".thirteenth2"
-            android:label="@string/title_activity_thirteenth2" >
-        </activity>
+
         <activity
             android:name=".fifteenth"
             android:label="@string/title_activity_fifteenth" >
@@ -88,13 +79,14 @@
             android:name=".sixteenth"
             android:label="@string/title_activity_sixteenth" >
         </activity>
-        <activity
-            android:name=".sixteenth2"
-            android:label="@string/title_activity_sixteenth2" >
-        </activity>
+
         <activity
             android:name=".seventeenth"
             android:label="@string/title_activity_seventeenth" >
+        </activity>
+        <activity
+            android:name=".rent"
+            android:label="@string/title_activity_rent" >
         </activity>
     </application>
 

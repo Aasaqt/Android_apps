@@ -1,3 +1,6 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -35,6 +38,11 @@
         android:layout_below="@id/question"
         android:layout_marginTop="15dp"
         />
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radiogroup"
+        android:layout_below="@id/description">
     <RadioButton
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -92,15 +100,57 @@
         android:layout_below="@id/option5"
         android:layout_marginTop="11dp"
         />
+    <RadioButton
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Fittings : Padlocks etc."
+        android:textSize="18dp"
+        android:id="@+id/option7"
+        android:layout_below="@id/option6"
+        android:layout_marginTop="11dp"
+        />
+    <RadioButton
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="None"
+        android:textSize="18dp"
+        android:id="@+id/option8"
+        android:layout_below="@id/option7"
+        android:layout_marginTop="11dp"
+        />
+    <RadioButton
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Other : "
+        android:textSize="18dp"
+        android:id="@+id/option9"
+        android:layout_below="@id/option8"
+        android:layout_marginTop="11dp"
+        />
+    </RadioGroup>
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:visibility="invisible"
+        android:layout_below="@id/radiogroup"
+        android:layout_marginLeft="104dp"
+
+        android:layout_alignRight="@id/option9"
+        android:layout_alignEnd="@id/option9"
+        android:id="@+id/edittext"
+        />
 
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="NEXT"
         android:textSize="9pt"
+        android:layout_below="@id/edittext"
         android:padding="2pt"
         android:textColor="#ff1ccc13"
         android:layout_alignParentBottom="true"
         android:id="@+id/next"
         />
 </RelativeLayout>
+    </ScrollView>

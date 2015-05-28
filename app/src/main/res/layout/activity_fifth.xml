@@ -1,3 +1,6 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -40,6 +43,7 @@
         android:layout_height="wrap_content"
         android:singleLine="true"
         android:inputType="phone"
+        android:hint="optional"
         android:layout_marginTop="17dp"
         android:id="@+id/name_refree"
         android:layout_below="@id/description"
@@ -50,9 +54,11 @@
         android:layout_height="wrap_content"
         android:text="NEXT"
         android:textSize="9pt"
+        android:layout_below="@id/name_refree"
         android:padding="2pt"
         android:textColor="#ff1ccc13"
         android:layout_alignParentBottom="true"
         android:id="@+id/next"
         />
 </RelativeLayout>
+</ScrollView>

@@ -1,3 +1,6 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -35,6 +38,11 @@
         android:layout_below="@id/question"
         android:layout_marginTop="10dp"
         />
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radiogroup"
+        android:layout_below="@id/description">
     <RadioButton
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -98,16 +106,16 @@
         android:layout_below="@id/option6"
         android:layout_marginTop="7dp"
         />
+    </RadioGroup>
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:singleLine="true"
-        android:layout_alignTop="@id/option7"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:visibility="invisible"
+        android:layout_below="@id/radiogroup"
         android:layout_marginLeft="104dp"
-        android:layout_marginStart="104dp"
+
         android:layout_alignRight="@id/option7"
         android:layout_alignEnd="@id/option7"
         android:id="@+id/option8"
@@ -117,9 +125,11 @@
         android:layout_height="wrap_content"
         android:text="NEXT"
         android:textSize="9pt"
+        android:layout_below="@id/option8"
         android:padding="2pt"
         android:textColor="#ff1ccc13"
         android:layout_alignParentBottom="true"
         android:id="@+id/next"
         />
 </RelativeLayout>
+</ScrollView>

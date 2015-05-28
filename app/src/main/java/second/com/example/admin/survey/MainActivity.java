@@ -1,27 +1,44 @@
 package second.com.example.admin.survey;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.view.View.OnClickListener;
+import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends ActionBarActivity implements OnClickListener{
     //private int count=1;
     private Button first;
+    AlertDialog dia;
+    EditText first_refree;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         first=(Button)findViewById(R.id.next);
-        first.setOnClickListener(this);
+        first_refree = (EditText) findViewById(R.id.name_refree);
+
+            first.setOnClickListener(this);
+        getWindow().setSoftInputMode(
+                WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN
+        );
+
     }
     public void onClick(View v){
-        Intent i=new Intent(this,second.class);
-        startActivity(i);
-        finish();
+        if(first_refree.getText().toString().matches("")){
+            Toast.makeText(MainActivity.this,"Fill the name of the refree",Toast.LENGTH_LONG).show();
+        }else {
+            Intent i = new Intent(this, second.class);
+            startActivity(i);
+            finish();
+        }
         /*
         count++;
         switch(count){

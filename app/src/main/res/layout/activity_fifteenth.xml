@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -22,6 +25,11 @@
         android:layout_below="@id/header"
         android:layout_marginTop="20dp"
         />
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radiogroup"
+        android:layout_below="@id/question">
     <RadioButton
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -76,20 +84,23 @@
         android:textSize="18dp"
         android:layout_marginTop="20dp"
         />
+    </RadioGroup>
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/option7"
-        android:layout_alignParentLeft="true"
+        android:visibility="invisible"
+        android:layout_below="@id/radiogroup"
         android:layout_alignRight="@id/option6"
-        android:layout_alignTop="@id/option6"
+        android:layout_alignEnd="@id/option6"
         android:layout_marginLeft="105dp"
-        android:layout_marginStart="105dp"
+
         />
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="NEXT"
+        android:layout_below="@id/option7"
         android:textSize="9pt"
         android:padding="17dp"
         android:textColor="#ff1ccc13"
@@ -97,3 +108,4 @@
         android:id="@+id/next"
         />
 </RelativeLayout>
+    </ScrollView>

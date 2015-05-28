@@ -1,3 +1,6 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -39,6 +42,7 @@
         android:id="@+id/additional"
         android:layout_below="@id/description"
         android:minLines="5"
+        android:hint="optional"
         android:layout_marginTop="20dp"
         />
     <Button
@@ -47,9 +51,11 @@
         android:text="FINISH"
         android:textSize="9pt"
         android:padding="2pt"
+        android:layout_below="@id/additional"
         android:textColor="#ff1ccc13"
         android:layout_alignParentBottom="true"
         android:id="@+id/next"
         />
 
 </RelativeLayout>
+    </ScrollView>

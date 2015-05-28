@@ -6,22 +6,37 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.view.View.OnClickListener;
+import android.widget.EditText;
+import android.widget.Toast;
 
 public class fourth extends ActionBarActivity implements OnClickListener{
+    EditText email;
+    String EMAIL_Validation = "[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fourth);
         Button button=(Button)findViewById(R.id.next);
+        email = (EditText) findViewById(R.id.email);
         button.setOnClickListener(this);
+        getWindow().setSoftInputMode(
+                WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN
+        );
     }
     public void onClick(View v){
-        Intent i=new Intent(this,fifth.class);
-        startActivity(i);
-        finish();
+        if(email.getText().toString().matches("")){
+            Toast.makeText(fourth.this,"Fill the email",Toast.LENGTH_LONG).show();
+        }else if(!email.getText().toString().trim().matches(EMAIL_Validation)){
+            Toast.makeText(fourth.this,"Enter the valid Email",Toast.LENGTH_LONG).show();
+        }else {
+            Intent i = new Intent(this, fifth.class);
+            startActivity(i);
+            finish();
+        }
     }
 
 }
