@@ -1,7 +1,6 @@
 package second.com.example.admin.survey;
 
 import android.content.Intent;
-import android.os.Environment;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -12,13 +11,7 @@ import android.widget.Button;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
 import android.widget.Toast;
-import au.com.bytecode.opencsv.CSVReader;
-import au.com.bytecode.opencsv.CSVWriter;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
 
 import Database.DBSurvey;
@@ -79,48 +72,6 @@ public class seventeenth extends ActionBarActivity implements OnClickListener{
                 fifteenth,other_sixteenth,sixteenth,comments.getText().toString());
         DBSurvey dbl = new DBSurvey(seventeenth.this);
         dbl.addSurvey(dblb);
-
-
-        File exportDir = new File(Environment.getExternalStorageDirectory(), "");
-        if (!exportDir.exists()) {
-            exportDir.mkdirs();
-        }
-
-        file = new File(exportDir, "PersonCSV.csv");
-        try {
-            CSVReader reader = new CSVReader(new FileReader(file));
-            String [] nextLine;
-            try {
-                while ((nextLine = reader.readNext()) != null) {
-
-                    // nextLine[] is an array of values from the line
-
-                    String fname=nextLine[0];
-                    String lname=nextLine[1];
-                    String address=nextLine[2];
-                    String email=nextLine[3];
-
-                    if(fname.equalsIgnoreCase("First Name"))
-                    {
-
-                    }
-                    else
-                    {
-                        int value=dbhelper.addPersonData(new Person(fname,lname,address,email));
-                        if(value==1)
-                        {
-                            Toast.makeText(getApplicationContext(), "Data inerted into table", Toast.LENGTH_LONG).show();
-                        }
-                    }
-
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
         /*Intent i=new Intent(this,fifteenth.class);
         startActivity(i);
         finish();*/
