@@ -34,6 +34,14 @@ public class fourth extends ActionBarActivity implements OnClickListener{
             Toast.makeText(fourth.this,"Enter the valid Email",Toast.LENGTH_LONG).show();
         }else {
             Intent i = new Intent(this, fifth.class);
+            String name = getIntent().getExtras().getString("Name_Person");
+            String name_refree = getIntent().getExtras().getString("Name_Refree");
+            String address = getIntent().getExtras().getString("Address");
+            i.putExtra("Name_Person",name);
+            i.putExtra("Address",address);
+            i.putExtra("Name_Refree",name_refree);
+            i.putExtra("Email",email.getText().toString());
+
             startActivity(i);
             finish();
         }

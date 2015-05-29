@@ -18,15 +18,13 @@ public class sixth extends ActionBarActivity implements OnClickListener{
     RadioButton selectedRadioButton,other;
     EditText text;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sixth);
         Button button=(Button)findViewById(R.id.next);
         choice = (RadioGroup) findViewById(R.id.radiogroup);
-        final int selectId = choice.getCheckedRadioButtonId();
-        selectedRadioButton = (RadioButton) findViewById(selectId);
+
         other = (RadioButton) findViewById(R.id.option4);
         text = (EditText) findViewById(R.id.option5);
         choice.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -52,6 +50,13 @@ public class sixth extends ActionBarActivity implements OnClickListener{
 
     public void onClick(View v) {
 
+        String name = getIntent().getExtras().getString("Name_Person");
+        String name_refree = getIntent().getExtras().getString("Name_Refree");
+        String address = getIntent().getExtras().getString("Address");
+        String email = getIntent().getExtras().getString("Email");
+        String phone = getIntent().getExtras().getString("Phone");
+        int selectId = choice.getCheckedRadioButtonId();
+        selectedRadioButton = (RadioButton) findViewById(selectId);
 
         if(other.isChecked()){
 
@@ -59,6 +64,13 @@ public class sixth extends ActionBarActivity implements OnClickListener{
                 Toast.makeText(sixth.this,"Fill the other option",Toast.LENGTH_LONG).show();
             }else{
                 Intent i = new Intent(this, rent.class);
+                //i.putExtra("sixth","other");
+                i.putExtra("Other_Sixth",selectedRadioButton.getText().toString() + "," + text.getText().toString());
+                i.putExtra("Name_Person",name);
+                i.putExtra("Address",address);
+                i.putExtra("Name_Refree",name_refree);
+                i.putExtra("Email",email);
+                i.putExtra("Phone",phone);
                 startActivity(i);
                 finish();
             }
@@ -69,6 +81,15 @@ public class sixth extends ActionBarActivity implements OnClickListener{
         }else {
             //other.setSelected(false);
             Intent i = new Intent(this, rent.class);
+
+            i.putExtra("Sixth",selectedRadioButton.getText().toString());
+            i.putExtra("Name_Person",name);
+            i.putExtra("Address",address);
+            i.putExtra("Name_Refree",name_refree);
+            i.putExtra("Email",email);
+            i.putExtra("Phone",phone);
+
+            //Toast.makeText(this,selectedRadioButton.getText().toString()+" , "+text.getText().toString(),Toast.LENGTH_LONG).show();
             startActivity(i);
             finish();
         }

@@ -42,7 +42,7 @@
         android:id="@+id/option1"
         android:layout_below="@id/question"
         android:layout_marginTop="30dp"
-        android:checked="true"
+
         android:layout_alignParentEnd="false"
         android:layout_alignParentStart="false" />
     <RadioButton

@@ -20,6 +20,7 @@ public class third extends ActionBarActivity implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_third);
         Button button=(Button)findViewById(R.id.next);
+        //String add_to_cart_from = getIntent().getExtras().getString("second");
         address = (EditText) findViewById(R.id.address);
         button.setOnClickListener(this);
         getWindow().setSoftInputMode(
@@ -30,10 +31,17 @@ public class third extends ActionBarActivity implements View.OnClickListener{
         if(address.getText().toString().matches("")){
             Toast.makeText(third.this,"Fill the address",Toast.LENGTH_LONG).show();
         }else {
+            String name = getIntent().getExtras().getString("Name_Person");
+            String name_refree = getIntent().getExtras().getString("Name_Refree");
             Intent i = new Intent(this, fourth.class);
+            i.putExtra("Name_Person",name);
+            i.putExtra("Address",address.getText().toString());
+            i.putExtra("Name_Refree",name_refree);
+            //Toast.makeText(this,name +"\n"+name_refree+"\n"+address.getText().toString(),Toast.LENGTH_LONG).show();
             startActivity(i);
             finish();
         }
+
     }
 
 

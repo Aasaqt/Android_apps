@@ -1,7 +1,6 @@
 package second.com.example.admin.survey;
 
 import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -35,7 +34,11 @@ public class MainActivity extends ActionBarActivity implements OnClickListener{
         if(first_refree.getText().toString().matches("")){
             Toast.makeText(MainActivity.this,"Fill the name of the refree",Toast.LENGTH_LONG).show();
         }else {
+            /*DBFirstBean dblb = new DBFirstBean(first_refree.getText().toString());
+            DBSurvey dbl = new DBSurvey(MainActivity.this);
+            dbl.addFirst(dblb);*/
             Intent i = new Intent(this, second.class);
+            i.putExtra("Name_Refree",first_refree.getText().toString());
             startActivity(i);
             finish();
         }

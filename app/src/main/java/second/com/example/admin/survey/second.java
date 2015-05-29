@@ -31,7 +31,13 @@ public class second extends ActionBarActivity implements OnClickListener{
             Toast.makeText(second.this,"Fill the name of the person",Toast.LENGTH_LONG).show();
         }else {
             Intent i = new Intent(this, third.class);
+            //Intent p = new Intent(this,seventeenth.class);
+            String name_refree = getIntent().getExtras().getString("Name_Refree");
+            i.putExtra("Name_Refree",name_refree);
+            i.putExtra("Name_Person",name_person.getText().toString());
+            //startActivity(p);
             startActivity(i);
+
             finish();
         }
     }
