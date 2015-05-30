@@ -1,0 +1,125 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Flatabout Survey"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:padding="2pt"
+        android:textSize="25dp"
+        android:background="#ff1ccc13"
+        android:id="@+id/header"
+        />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Water Problems"
+        android:textSize="25dp"
+        android:id="@+id/question"
+        android:layout_below="@id/header"
+        android:layout_marginTop="30dp"
+        />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Do you suffer from these problems?"
+        android:textSize="20dp"
+        android:id="@+id/description"
+        android:layout_below="@id/question"
+        android:layout_marginTop="10dp"
+        />
+    <RadioButton
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Shared motor"
+        android:textSize="19dp"
+        android:id="@+id/option1"
+        android:layout_below="@id/description"
+        android:layout_marginTop="17dp"/>
+
+    <RadioButton
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Shared tanki"
+        android:textSize="19dp"
+        android:id="@+id/option2"
+        android:layout_below="@id/option1"
+        android:layout_marginTop="7dp"
+        />
+    <RadioButton
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Lack of 24x7 water supply"
+        android:textSize="19dp"
+        android:id="@+id/option3"
+        android:layout_below="@id/option2"
+        android:layout_marginTop="7dp"
+        />
+    <RadioButton
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Bad quality of water"
+        android:textSize="19dp"
+        android:id="@+id/option4"
+        android:layout_below="@id/option3"
+        android:layout_marginTop="7dp"
+        />
+    <RadioButton
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Dependent on Municipal supply/tankers"
+        android:textSize="19dp"
+        android:id="@+id/option5"
+        android:layout_below="@id/option4"
+        android:layout_marginTop="7dp"
+        />
+    <RadioButton
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="None"
+        android:textSize="19dp"
+        android:id="@+id/option6"
+        android:layout_below="@id/option5"
+        android:layout_marginTop="7dp"
+        />
+    <RadioButton
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Other : "
+        android:textSize="19dp"
+        android:id="@+id/option7"
+        android:layout_below="@id/option6"
+        android:layout_marginTop="7dp"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:layout_alignTop="@id/option7"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="104dp"
+        android:layout_marginStart="104dp"
+        android:layout_alignRight="@id/option7"
+        android:layout_alignEnd="@id/option7"
+        android:id="@+id/option8"
+        />
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="NEXT"
+        android:textSize="9pt"
+        android:padding="2pt"
+        android:textColor="#ff1ccc13"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/next"
+        />
+</RelativeLayout>

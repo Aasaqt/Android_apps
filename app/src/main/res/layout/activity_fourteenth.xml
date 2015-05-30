@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Flatabout Survey"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:padding="2pt"
+        android:textSize="25dp"
+        android:background="#ff1ccc13"
+        android:id="@+id/header"
+        />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Number of rooms : "
+        android:textSize="30dp"
+        android:id="@+id/question"
+        android:layout_below="@id/header"
+        android:layout_marginTop="30dp"
+        />
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rooms"
+        android:layout_below="@id/question"
+        android:layout_marginTop="25dp"
+        />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="NEXT"
+        android:textSize="9pt"
+        android:padding="17dp"
+        android:textColor="#ff1ccc13"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/next"
+        />
+</RelativeLayout>

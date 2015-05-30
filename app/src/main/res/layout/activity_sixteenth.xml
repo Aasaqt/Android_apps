@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Flatabout Survey"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:padding="2pt"
+        android:textSize="25dp"
+        android:background="#ff1ccc13"
+        android:id="@+id/header"
+        />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Locality"
+        android:textSize="20dp"
+        android:id="@+id/question"
+        android:layout_below="@id/header"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/question"
+        android:id="@+id/description"
+        android:text="How is your locality? Enlist the problems"
+        android:textSize="17dp"
+        android:layout_marginTop="10dp"
+        />
+    <RadioButton
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Parking Unavailable"
+        android:textSize="15dp"
+        android:id="@+id/option1"
+        android:layout_below="@id/description"
+        android:layout_marginTop="10dp"/>
+
+    <RadioButton
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Unsafe for women"
+        android:textSize="15dp"
+        android:id="@+id/option2"
+        android:layout_below="@id/option1"
+        android:layout_marginTop="7dp"
+        />
+    <RadioButton
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Improper roads"
+        android:textSize="15dp"
+        android:id="@+id/option3"
+        android:layout_below="@id/option2"
+        android:layout_marginTop="7dp"
+        />
+    <RadioButton
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Public transport too far"
+        android:textSize="15dp"
+        android:id="@+id/option4"
+        android:layout_below="@id/option3"
+        android:layout_marginTop="7dp"
+        />
+    <RadioButton
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Older Demography"
+        android:textSize="15dp"
+        android:id="@+id/option5"
+        android:layout_below="@id/option4"
+        android:layout_marginTop="7dp"
+        />
+    <RadioButton
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="No accessibility of cars to doorstep"
+        android:textSize="15dp"
+        android:id="@+id/option6"
+        android:layout_below="@id/option5"
+        android:layout_marginTop="7dp"
+        />
+    <RadioButton
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="No grocery shops nearby(at walking distance)"
+        android:textSize="15dp"
+        android:id="@+id/option7"
+        android:layout_below="@id/option6"
+        android:layout_marginTop="7dp"
+        />
+    <RadioButton
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Traffic Noise"
+        android:textSize="15dp"
+        android:id="@+id/option8"
+        android:layout_below="@id/option7"
+        android:layout_marginTop="7dp"
+        />
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="NEXT"
+        android:textSize="9pt"
+        android:padding="2pt"
+        android:textColor="#ff1ccc13"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/next"
+        />
+</RelativeLayout>
