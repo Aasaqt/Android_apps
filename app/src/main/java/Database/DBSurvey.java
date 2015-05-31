@@ -29,18 +29,18 @@ public class DBSurvey extends SQLiteOpenHelper {
     private static final String KEY_NINTH = "electricity";
     private static final String KEY_NINTH_OTHER = "electricity_other";
     private static final String KEY_TENTH = "water_problems";
-    private static final String KEY_TENTH_OTHER = "water_problems_other";
+    //private static final String KEY_TENTH_OTHER = "water_problems_other";
     private static final String KEY_ELEVENTH = "landlord_fights";
-    private static final String KEY_ELEVENTH_OTHER = "landlord_fights_other";
+    //private static final String KEY_ELEVENTH_OTHER = "landlord_fights_other";
     private static final String KEY_TWELVTH = "living_conditions";
-    private static final String KEY_TWELVTH_OTHER = "living_conditions_other";
+    //private static final String KEY_TWELVTH_OTHER = "living_conditions_other";
     private static final String KEY_THIRTEENTH = "facilities";
-    private static final String KEY_THIRTEENTH_OTHER = "facilities_other";
+    //private static final String KEY_THIRTEENTH_OTHER = "facilities_other";
     private static final String KEY_ROOMS = "rooms";
     private static final String KEY_FIFTEENTH = "neighbours";
-    private static final String KEY_FIFTEENTH_OTHER = "neighbours_other";
+    //private static final String KEY_FIFTEENTH_OTHER = "neighbours_other";
     private static final String KEY_SIXTEENTH = "locality";
-    private static final String KEY_SIXTEENTH_OTHER = "locality_other";
+    //private static final String KEY_SIXTEENTH_OTHER = "locality_other";
     private static final String KEY_REMARKS = "remarks";
 
 
@@ -62,10 +62,9 @@ public class DBSurvey extends SQLiteOpenHelper {
                 + KEY_ID + " TEXT PRIMARY KEY," + KEY_NAME_REFREE + " TEXT,"+ KEY_NAME + " TEXT,"+KEY_ADDRESS + " TEXT,"
                 + KEY_EMAIL +" TEXT," + KEY_PHONE + " TEXT," + KEY_SIXTH + " TEXT," + KEY_SIXTH_OTHER + " TEXT,"+ KEY_RENT + " TEXT," + KEY_SEVENTH + " TEXT,"
                 + KEY_SEVENTH_OTHER + " TEXT,"+ KEY_EIGHTH + " TEXT," + KEY_EIGHTH_OTHER + " TEXT,"+ KEY_NINTH + " TEXT,"
-                + KEY_NINTH_OTHER + " TEXT," + KEY_TENTH + " TEXT," + KEY_TENTH_OTHER + " TEXT,"+ KEY_ELEVENTH + " TEXT," + KEY_ELEVENTH_OTHER + " TEXT,"
-                + KEY_TWELVTH + " TEXT," + KEY_TWELVTH_OTHER + " TEXT,"+ KEY_THIRTEENTH + " TEXT," + KEY_THIRTEENTH_OTHER + " TEXT,"
-                + KEY_ROOMS + " TEXT," + KEY_FIFTEENTH + " TEXT," + KEY_FIFTEENTH_OTHER + " TEXT," + KEY_SIXTEENTH + " TEXT,"
-                + KEY_SIXTEENTH_OTHER + " TEXT,"+ KEY_REMARKS + " TEXT"+")";
+                + KEY_NINTH_OTHER + " TEXT," + KEY_TENTH + " TEXT," + KEY_ELEVENTH + " TEXT," + KEY_TWELVTH + " TEXT,"
+                + KEY_THIRTEENTH + " TEXT," + KEY_ROOMS + " TEXT," + KEY_FIFTEENTH + " TEXT," + KEY_SIXTEENTH + " TEXT,"
+                + KEY_REMARKS + " TEXT"+")";
 
         db.execSQL(CREATE_SURVEY_TABLE);
 
@@ -96,18 +95,18 @@ public class DBSurvey extends SQLiteOpenHelper {
             values.put(KEY_NINTH, lb.getNinth());
             values.put(KEY_NINTH_OTHER, lb.getOther_ninth());
             values.put(KEY_TENTH, lb.getTenth());
-            values.put(KEY_TENTH_OTHER, lb.getOther_tenth());
+            //values.put(KEY_TENTH_OTHER, lb.getOther_tenth());
             values.put(KEY_ELEVENTH, lb.getEleventh());
-            values.put(KEY_ELEVENTH_OTHER, lb.getOther_eleventh());
+            //values.put(KEY_ELEVENTH_OTHER, lb.getOther_eleventh());
             values.put(KEY_TWELVTH, lb.getTwelvth());
-            values.put(KEY_TWELVTH_OTHER, lb.getOther_twelvth());
+            //values.put(KEY_TWELVTH_OTHER, lb.getOther_twelvth());
             values.put(KEY_THIRTEENTH, lb.getThirteenth());
-            values.put(KEY_THIRTEENTH_OTHER, lb.getOther_thirteenth());
+            //values.put(KEY_THIRTEENTH_OTHER, lb.getOther_thirteenth());
             values.put(KEY_ROOMS, lb.getRooms());
             values.put(KEY_FIFTEENTH, lb.getFifteenth());
-            values.put(KEY_FIFTEENTH_OTHER, lb.getOther_fifteenth());
+            //values.put(KEY_FIFTEENTH_OTHER, lb.getOther_fifteenth());
             values.put(KEY_SIXTEENTH, lb.getSixteenth());
-            values.put(KEY_SIXTEENTH_OTHER, lb.getOther_sixteenth());
+            //values.put(KEY_SIXTEENTH_OTHER, lb.getOther_sixteenth());
             values.put(KEY_REMARKS, lb.getComments());
 
             db.insert(TABLE_SURVEY, null, values);
@@ -146,19 +145,20 @@ public class DBSurvey extends SQLiteOpenHelper {
                     dbcBean.setNinth(cursor.getString(12));
                     dbcBean.setOther_ninth(cursor.getString(13));
                     dbcBean.setTenth(cursor.getString(14));
-                    dbcBean.setOther_tenth(cursor.getString(15));
-                    dbcBean.setEleventh(cursor.getString(16));
-                    dbcBean.setOther_eleventh(cursor.getString(17));
-                    dbcBean.setTwelvth(cursor.getString(18));
-                    dbcBean.setOther_twelvth(cursor.getString(19));
-                    dbcBean.setThirteenth(cursor.getString(20));
-                    dbcBean.setOther_thirteenth(cursor.getString(21));
-                    dbcBean.setRooms(cursor.getString(22));
-                    dbcBean.setRooms(cursor.getString(23));
-                    dbcBean.setFifteenth(cursor.getString(24));
-                    dbcBean.setOther_fifteenth(cursor.getString(25));
-                    dbcBean.setSixteenth(cursor.getString(26));
-                    dbcBean.setOther_sixteenth(cursor.getString(27));
+                    //dbcBean.setOther_tenth(cursor.getString(15));
+                    dbcBean.setEleventh(cursor.getString(15));
+                    //dbcBean.setOther_eleventh(cursor.getString(17));
+                    dbcBean.setTwelvth(cursor.getString(16));
+                    //dbcBean.setOther_twelvth(cursor.getString(19));
+                    dbcBean.setThirteenth(cursor.getString(17));
+                    //dbcBean.setOther_thirteenth(cursor.getString(21));
+                    dbcBean.setRooms(cursor.getString(18));
+
+                    dbcBean.setFifteenth(cursor.getString(19));
+                    //dbcBean.setOther_fifteenth(cursor.getString(25));
+                    dbcBean.setSixteenth(cursor.getString(20));
+                    dbcBean.setComments(cursor.getString(21));
+                    //dbcBean.setOther_sixteenth(cursor.getString(27));
 
                     YC_list.add(dbcBean);
                 } while (cursor.moveToNext());

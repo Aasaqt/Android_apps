@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/radiogroup"
         android:layout_below="@id/question">
-    <RadioButton
+    <CheckBox
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/question"
@@ -38,8 +38,8 @@
         android:textSize="18dp"
         android:layout_marginTop="20dp"
         android:id="@+id/option1"
-        />
-    <RadioButton
+        android:onClick="onCheckboxClicked"/>
+    <CheckBox
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/option1"
@@ -47,8 +47,8 @@
         android:text="Noisy"
         android:textSize="18dp"
         android:layout_marginTop="20dp"
-        />
-    <RadioButton
+        android:onClick="onCheckboxClicked"/>
+    <CheckBox
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/option2"
@@ -56,8 +56,8 @@
         android:text="Intrusive"
         android:textSize="18dp"
         android:layout_marginTop="20dp"
-        />
-    <RadioButton
+        android:onClick="onCheckboxClicked"/>
+    <CheckBox
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/option3"
@@ -65,8 +65,8 @@
         android:text="Friendly"
         android:textSize="18dp"
         android:layout_marginTop="20dp"
-        />
-    <RadioButton
+        android:onClick="onCheckboxClicked"/>
+    <CheckBox
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/option4"
@@ -74,8 +74,8 @@
         android:text="Indifferent"
         android:textSize="18dp"
         android:layout_marginTop="20dp"
-        />
-    <RadioButton
+        android:onClick="onCheckboxClicked"/>
+    <CheckBox
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/option5"
@@ -83,11 +83,13 @@
         android:text="Other"
         android:textSize="18dp"
         android:layout_marginTop="20dp"
-        />
+        android:onClick="onCheckboxClicked"/>
     </RadioGroup>
     <EditText
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
+        android:textSize="20dp"
+        android:background="@drawable/edittext"
         android:id="@+id/option7"
         android:visibility="invisible"
         android:layout_below="@id/radiogroup"
@@ -96,11 +98,38 @@
         android:layout_marginLeft="105dp"
 
         />
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+
+        android:padding="2pt"
+        android:layout_marginTop="0dp"
+        android:indeterminate="false"
+        android:max="18"
+        android:minHeight="50dp"
+        android:minWidth="200dp"
+        android:progress="16"
+        android:paddingBottom="0pt"
+        android:layout_below="@id/option7"/>
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/progressBar1"
+        android:layout_below="@id/progressBar1"
+        android:text="16/18"
+        android:textSize="15dp"
+        android:paddingTop="0pt"
+        android:textColor="#0092ff"
+        android:padding="2pt"/>
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="NEXT"
-        android:layout_below="@id/option7"
+        android:layout_below="@id/textView1"
         android:textSize="9pt"
         android:padding="17dp"
         android:textColor="#ff1ccc13"

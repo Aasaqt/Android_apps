@@ -15,6 +15,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity
             android:name=".second"
@@ -51,6 +52,7 @@
         <activity
             android:name=".tenth"
             android:label="@string/title_activity_tenth" >
+
         </activity>
         <activity
             android:name=".eleventh"

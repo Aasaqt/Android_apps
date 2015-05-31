@@ -17,9 +17,8 @@ public class DBSurveyBean {
 
     public DBSurveyBean(String name_refree,String name,String address,String email,String phone,String other_sixth,String sixth,
                         String rent,String other_seven,String seven,String other_eighth,String eighth,String other_ninth,
-                        String ninth,String other_tenth,String tenth,String other_eleventh,String eleventh,String other_twelvth,
-                        String twelvth,String other_thirteenth,String thirteenth,String rooms,String other_fifteenth,
-                        String fifteenth,String other_sixteenth,String sixteenth,String comments)
+                        String ninth,String tenth,String eleventh,String twelvth,String thirteenth,String rooms,
+                        String fifteenth,String sixteenth,String comments)
     {
         this.name= name;
         this.name_refree= name_refree;
@@ -35,18 +34,18 @@ public class DBSurveyBean {
         this.eighth = eighth;
         this.other_ninth = other_ninth;
         this.ninth = ninth;
-        this.other_tenth = other_tenth;
+        //this.other_tenth = other_tenth;
         this.tenth = tenth;
-        this.other_eleventh = other_eleventh;
+        //this.other_eleventh = other_eleventh;
         this.eleventh = eleventh;
-        this.other_twelvth = other_twelvth;
+        //this.other_twelvth = other_twelvth;
         this.twelvth = twelvth;
-        this.other_thirteenth = other_thirteenth;
+        //this.other_thirteenth = other_thirteenth;
         this.thirteenth = thirteenth;
         this.rooms = rooms;
-        this.other_fifteenth = other_fifteenth;
+        //this.other_fifteenth = other_fifteenth;
         this.fifteenth = fifteenth;
-        this.other_sixteenth=other_sixteenth;
+        //this.other_sixteenth=other_sixteenth;
         this.sixteenth = sixteenth;
         this.comments = comments;
 
@@ -159,12 +158,12 @@ public class DBSurveyBean {
         this.tenth = tenth;
     }
 
-    public String getOther_tenth() {
+    /*public String getOther_tenth() {
         return other_tenth;
     }
     public void setOther_tenth(String other_tenth) {
         this.other_tenth = other_tenth;
-    }
+    }*/
 
     public String getEleventh() {
         return eleventh;
@@ -173,12 +172,12 @@ public class DBSurveyBean {
         this.eleventh = eleventh;
     }
 
-    public String getOther_eleventh() {
+    /*public String getOther_eleventh() {
         return other_eleventh;
     }
     public void setOther_eleventh(String other_eleventh) {
         this.other_eleventh = other_eleventh;
-    }
+    }*/
 
     public String getTwelvth() {
         return twelvth;
@@ -187,12 +186,12 @@ public class DBSurveyBean {
         this.twelvth = twelvth;
     }
 
-    public String getOther_twelvth() {
+    /*public String getOther_twelvth() {
         return other_twelvth;
     }
     public void setOther_twelvth(String other_twelvth) {
         this.other_twelvth = other_twelvth;
-    }
+    }*/
 
     public String getThirteenth() {
         return thirteenth;
@@ -201,12 +200,12 @@ public class DBSurveyBean {
         this.thirteenth = thirteenth;
     }
 
-    public String getOther_thirteenth() {
+    /*public String getOther_thirteenth() {
         return other_thirteenth;
     }
     public void setOther_thirteenth(String other_thirteenth) {
         this.other_thirteenth = other_thirteenth;
-    }
+    }*/
 
     public String getRooms() {
         return rooms;
@@ -222,12 +221,12 @@ public class DBSurveyBean {
         this.fifteenth = fifteenth;
     }
 
-    public String getOther_fifteenth() {
+    /*public String getOther_fifteenth() {
         return other_fifteenth;
     }
     public void setOther_fifteenth(String other_fifteenth) {
         this.other_fifteenth = other_fifteenth;
-    }
+    }*/
 
     public String getSixteenth() {
         return sixteenth;
@@ -236,12 +235,12 @@ public class DBSurveyBean {
         this.sixteenth = sixteenth;
     }
 
-    public String getOther_sixteenth() {
+    /*public String getOther_sixteenth() {
         return other_sixteenth;
     }
     public void setOther_sixteenth(String other_sixteenth) {
         this.other_sixteenth = other_sixteenth;
-    }
+    }*/
 
     public String getComments() {
         return comments;

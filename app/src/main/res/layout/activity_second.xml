@@ -40,20 +40,47 @@
         />
     <EditText
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:singleLine="true"
+        android:layout_height="35dp"
+        android:textSize="20dp"
         android:layout_marginTop="17dp"
         android:id="@+id/name_person"
         android:layout_below="@id/description"
-
+        android:background="@drawable/edittext"
         />
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+
+        android:padding="2pt"
+        android:layout_marginTop="50dp"
+        android:indeterminate="false"
+        android:max="18"
+        android:minHeight="50dp"
+        android:minWidth="200dp"
+        android:progress="2"
+        android:paddingBottom="0pt"
+        android:layout_below="@id/name_person"/>
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/progressBar1"
+        android:layout_below="@id/progressBar1"
+        android:text="2/18"
+        android:textSize="15dp"
+        android:paddingTop="0pt"
+        android:textColor="#0092ff"
+        android:padding="2pt"/>
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="NEXT"
         android:textSize="9pt"
         android:padding="2pt"
-        android:layout_below="@id/name_person"
+        android:layout_below="@id/textView1"
         android:textColor="#ff1ccc13"
         android:layout_alignParentBottom="true"
         android:id="@+id/next"

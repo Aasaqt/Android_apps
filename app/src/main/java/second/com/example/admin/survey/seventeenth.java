@@ -54,22 +54,21 @@ public class seventeenth extends ActionBarActivity implements OnClickListener{
         String eighth=getIntent().getExtras().getString("Eighth");
         String other_ninth=getIntent().getExtras().getString("Other_Ninth");
         String ninth=getIntent().getExtras().getString("Ninth");
-        String other_tenth=getIntent().getExtras().getString("Other_Tenth");
+        //String other_tenth=getIntent().getExtras().getString("Other_Tenth");
         String tenth=getIntent().getExtras().getString("Tenth");
-        String other_eleventh=getIntent().getExtras().getString("Other_Eleventh");
+        //String other_eleventh=getIntent().getExtras().getString("Other_Eleventh");
         String eleventh=getIntent().getExtras().getString("Eleventh");
-        String other_twelvth=getIntent().getExtras().getString("Other_Twelvth");
+        //String other_twelvth=getIntent().getExtras().getString("Other_Twelvth");
         String twelvth=getIntent().getExtras().getString("Twelvth");
-        String other_thirteenth=getIntent().getExtras().getString("Other_Thirteenth");
+        //String other_thirteenth=getIntent().getExtras().getString("Other_Thirteenth");
         String thirteenth=getIntent().getExtras().getString("Thirteenth");
         String rooms = getIntent().getExtras().getString("Rooms");
-        String other_fifteenth=getIntent().getExtras().getString("Other_Fifteenth");
+        //String other_fifteenth=getIntent().getExtras().getString("Other_Fifteenth");
         String fifteenth=getIntent().getExtras().getString("Fifteenth");
-        String other_sixteenth=getIntent().getExtras().getString("Other_Sixteenth");
+        //String other_sixteenth=getIntent().getExtras().getString("Other_Sixteenth");
         String sixteenth=getIntent().getExtras().getString("Sixteenth");
         DBSurveyBean dblb = new DBSurveyBean(name_refree,name,address,email,phone,other_sixth,sixth,rent,other_seven,seven,other_eighth,eighth,
-                other_ninth,ninth,other_tenth,tenth,other_eleventh,eleventh,other_twelvth,twelvth,other_thirteenth,thirteenth,rooms,other_fifteenth,
-                fifteenth,other_sixteenth,sixteenth,comments.getText().toString());
+                other_ninth,ninth,tenth,eleventh,twelvth,thirteenth,rooms,fifteenth,sixteenth,comments.getText().toString());
         DBSurvey dbl = new DBSurvey(seventeenth.this);
         dbl.addSurvey(dblb);
         /*Intent i=new Intent(this,fifteenth.class);

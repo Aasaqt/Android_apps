@@ -43,16 +43,17 @@
         android:layout_height="wrap_content"
         android:id="@+id/radiogroup"
         android:layout_below="@id/description">
-    <RadioButton
+    <CheckBox
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Cupboards"
         android:textSize="18dp"
         android:id="@+id/option1"
         android:layout_below="@id/description"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:onClick="onCheckboxClicked"/>
 
-    <RadioButton
+    <CheckBox
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Bed"
@@ -60,8 +61,8 @@
         android:id="@+id/option2"
         android:layout_below="@id/option1"
         android:layout_marginTop="11dp"
-        />
-    <RadioButton
+        android:onClick="onCheckboxClicked"/>
+    <CheckBox
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="A.C."
@@ -69,9 +70,9 @@
         android:id="@+id/option3"
         android:layout_below="@id/option2"
         android:layout_marginTop="11dp"
-        />
+        android:onClick="onCheckboxClicked"/>
 
-    <RadioButton
+    <CheckBox
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Refrigerator"
@@ -79,9 +80,9 @@
         android:id="@+id/option4"
         android:layout_below="@id/option3"
         android:layout_marginTop="11dp"
-        />
+        android:onClick="onCheckboxClicked"/>
 
-    <RadioButton
+    <CheckBox
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Gas Stove"
@@ -89,9 +90,9 @@
         android:id="@+id/option5"
         android:layout_below="@id/option4"
         android:layout_marginTop="11dp"
-        />
+        android:onClick="onCheckboxClicked"/>
 
-    <RadioButton
+    <CheckBox
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Cylinder"
@@ -99,8 +100,8 @@
         android:id="@+id/option6"
         android:layout_below="@id/option5"
         android:layout_marginTop="11dp"
-        />
-    <RadioButton
+        android:onClick="onCheckboxClicked"/>
+    <CheckBox
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Fittings : Padlocks etc."
@@ -108,8 +109,8 @@
         android:id="@+id/option7"
         android:layout_below="@id/option6"
         android:layout_marginTop="11dp"
-        />
-    <RadioButton
+        android:onClick="onCheckboxClicked"/>
+    <CheckBox
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="None"
@@ -117,8 +118,8 @@
         android:id="@+id/option8"
         android:layout_below="@id/option7"
         android:layout_marginTop="11dp"
-        />
-    <RadioButton
+        android:onClick="onCheckboxClicked"/>
+    <CheckBox
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Other : "
@@ -126,11 +127,13 @@
         android:id="@+id/option9"
         android:layout_below="@id/option8"
         android:layout_marginTop="11dp"
-        />
+        android:onClick="onCheckboxClicked"/>
     </RadioGroup>
     <EditText
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
+        android:textSize="20dp"
+        android:background="@drawable/edittext"
         android:singleLine="true"
         android:visibility="invisible"
         android:layout_below="@id/radiogroup"
@@ -140,13 +143,40 @@
         android:layout_alignEnd="@id/option9"
         android:id="@+id/edittext"
         />
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+
+        android:padding="2pt"
+        android:layout_marginTop="0dp"
+        android:indeterminate="false"
+        android:max="18"
+        android:minHeight="50dp"
+        android:minWidth="200dp"
+        android:progress="14"
+        android:paddingBottom="0pt"
+        android:layout_below="@id/edittext"/>
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/progressBar1"
+        android:layout_below="@id/progressBar1"
+        android:text="14/18"
+        android:textSize="15dp"
+        android:paddingTop="0pt"
+        android:textColor="#0092ff"
+        android:padding="2pt"/>
 
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="NEXT"
         android:textSize="9pt"
-        android:layout_below="@id/edittext"
+        android:layout_below="@id/textView1"
         android:padding="2pt"
         android:textColor="#ff1ccc13"
         android:layout_alignParentBottom="true"

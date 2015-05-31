@@ -8,26 +8,46 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.view.View.OnClickListener;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class sixteenth extends ActionBarActivity implements OnClickListener{
     RadioGroup choice;
     RadioButton selectedRadioButton,other;
     EditText text;
+    CheckBox chk1,chk2,chk3,chk4,chk5,chk6,chk7,chk8,chk9,chk10,chk11,chk12,chk13;
+    ArrayList<String> list ;
+    String value;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sixteenth);
         Button button=(Button)findViewById(R.id.next);
-        choice = (RadioGroup) findViewById(R.id.radiogroup);
+        //choice = (RadioGroup) findViewById(R.id.radiogroup);
+        chk1=(CheckBox)findViewById(R.id.option1);
+        chk2=(CheckBox)findViewById(R.id.option2);
+        chk3=(CheckBox)findViewById(R.id.option3);
+        chk4=(CheckBox)findViewById(R.id.option4);
+        chk5=(CheckBox)findViewById(R.id.option5);
+        chk6=(CheckBox)findViewById(R.id.option6);
+        chk7=(CheckBox)findViewById(R.id.option7);
+        chk8=(CheckBox)findViewById(R.id.option8);
+        chk9=(CheckBox)findViewById(R.id.option9);
+        chk10=(CheckBox)findViewById(R.id.option10);
+        chk11=(CheckBox)findViewById(R.id.option11);
+        chk12=(CheckBox)findViewById(R.id.option12);
+        chk13=(CheckBox)findViewById(R.id.option13);
 
-        other = (RadioButton) findViewById(R.id.option13);
+        list = new ArrayList<String>();
+        //other = (RadioButton) findViewById(R.id.option13);
         text = (EditText) findViewById(R.id.option14);
-        choice.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        /*choice.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
 
                                               @Override
                                               public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -38,12 +58,78 @@ public class sixteenth extends ActionBarActivity implements OnClickListener{
                                                   }
                                               }
                                           }
-        );
+        );*/
         button.setOnClickListener(this);
     }
+    public void onCheckboxClicked(View view) {
+
+        boolean checked = ((CheckBox) view).isChecked();
+
+        switch(view.getId()) {
+            case R.id.option1:
+                list.add(chk1.getText().toString());
+
+
+                break;
+            case R.id.option2:
+                list.add(chk2.getText().toString());
+
+                break;
+
+            case R.id.option3:
+                list.add(chk3.getText().toString());
+
+                break;
+            case R.id.option4:
+                list.add(chk4.getText().toString());
+
+                break;
+            case R.id.option5:
+                list.add(chk5.getText().toString());
+
+                break;
+            case R.id.option6:
+                list.add(chk6.getText().toString());
+
+                break;
+            case R.id.option7:
+                list.add(chk7.getText().toString());
+
+
+                break;
+            case R.id.option8:
+                list.add(chk8.getText().toString());
+
+                break;
+
+            case R.id.option9:
+                list.add(chk9.getText().toString());
+
+                break;
+            case R.id.option10:
+                list.add(chk10.getText().toString());
+
+                break;
+            case R.id.option11:
+                list.add(chk11.getText().toString());
+
+                break;
+            case R.id.option12:
+                list.add(chk12.getText().toString());
+
+                break;
+            case R.id.option13:
+                text.setVisibility(View.VISIBLE);
+                String add = chk13.getText().toString() +text.getText().toString();
+                //Toast.makeText(this,add,Toast.LENGTH_LONG).show();
+                list.add(add);
+
+                break;
+           }
+    }
     public void onClick(View v){
-        int selectId = choice.getCheckedRadioButtonId();
-        selectedRadioButton = (RadioButton) findViewById(selectId);
+        //int selectId = choice.getCheckedRadioButtonId();
+        //selectedRadioButton = (RadioButton) findViewById(selectId);
         String name = getIntent().getExtras().getString("Name_Person");
         String name_refree = getIntent().getExtras().getString("Name_Refree");
         String address = getIntent().getExtras().getString("Address");
@@ -58,18 +144,18 @@ public class sixteenth extends ActionBarActivity implements OnClickListener{
         String eighth=getIntent().getExtras().getString("Eighth");
         String other_ninth=getIntent().getExtras().getString("Other_Ninth");
         String ninth=getIntent().getExtras().getString("Ninth");
-        String other_tenth=getIntent().getExtras().getString("Other_Tenth");
+        //String other_tenth=getIntent().getExtras().getString("Other_Tenth");
         String tenth=getIntent().getExtras().getString("Tenth");
-        String other_eleventh=getIntent().getExtras().getString("Other_Eleventh");
+        //String other_eleventh=getIntent().getExtras().getString("Other_Eleventh");
         String eleventh=getIntent().getExtras().getString("Eleventh");
-        String other_twelvth=getIntent().getExtras().getString("Other_Twelvth");
+        //String other_twelvth=getIntent().getExtras().getString("Other_Twelvth");
         String twelvth=getIntent().getExtras().getString("Twelvth");
-        String other_thirteenth=getIntent().getExtras().getString("Other_Thirteenth");
+        //String other_thirteenth=getIntent().getExtras().getString("Other_Thirteenth");
         String thirteenth=getIntent().getExtras().getString("Thirteenth");
         String rooms = getIntent().getExtras().getString("Rooms");
-        String other_fifteenth=getIntent().getExtras().getString("Other_Fifteenth");
+        //String other_fifteenth=getIntent().getExtras().getString("Other_Fifteenth");
         String fifteenth=getIntent().getExtras().getString("Fifteenth");
-        if(other.isChecked()){
+        /*if(other.isChecked()){
 
             if(text.getText().toString().matches("")){
                 Toast.makeText(sixteenth.this, "Fill the other option", Toast.LENGTH_LONG).show();
@@ -108,6 +194,13 @@ public class sixteenth extends ActionBarActivity implements OnClickListener{
         }else if(choice.getCheckedRadioButtonId() == -1){
 
             Toast.makeText(sixteenth.this,"Fill the entry",Toast.LENGTH_LONG).show();
+        }else {*/
+        for(int i=0;i<list.size();i++){
+            value = value +", "+list.get(i);
+
+        }
+        if(list.isEmpty()){
+            Toast.makeText(this,"Fill atleast one entry",Toast.LENGTH_LONG).show();
         }else {
             Intent i = new Intent(this, seventeenth.class);
             i.putExtra("Name_Person",name);
@@ -124,18 +217,18 @@ public class sixteenth extends ActionBarActivity implements OnClickListener{
             i.putExtra("Eighth",eighth);
             i.putExtra("Other_Ninth",other_ninth);
             i.putExtra("Ninth",ninth);
-            i.putExtra("Other_Tenth",other_tenth);
+            //i.putExtra("Other_Tenth",other_tenth);
             i.putExtra("Tenth",tenth);
-            i.putExtra("Other_Eleventh",other_eleventh);
+            //i.putExtra("Other_Eleventh",other_eleventh);
             i.putExtra("Eleventh",eleventh);
-            i.putExtra("Other_Twelvth",other_twelvth);
+            //i.putExtra("Other_Twelvth",other_twelvth);
             i.putExtra("Twelvth",twelvth);
-            i.putExtra("Other_Thirteenth",other_thirteenth);
+            //i.putExtra("Other_Thirteenth",other_thirteenth);
             i.putExtra("Thirteenth",thirteenth);
             i.putExtra("Rooms",rooms);
-            i.putExtra("Other_Fifteenth",other_fifteenth);
+            //i.putExtra("Other_Fifteenth",other_fifteenth);
             i.putExtra("Fifteenth",fifteenth);
-            i.putExtra("Sixteenth",selectedRadioButton.getText().toString());
+            i.putExtra("Sixteenth",value);
             startActivity(i);
             finish();
         }

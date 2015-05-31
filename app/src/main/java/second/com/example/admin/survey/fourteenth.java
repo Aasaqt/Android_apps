@@ -38,13 +38,13 @@ public class fourteenth extends ActionBarActivity implements OnClickListener{
         String eighth=getIntent().getExtras().getString("Eighth");
         String other_ninth=getIntent().getExtras().getString("Other_Ninth");
         String ninth=getIntent().getExtras().getString("Ninth");
-        String other_tenth=getIntent().getExtras().getString("Other_Tenth");
+        //String other_tenth=getIntent().getExtras().getString("Other_Tenth");
         String tenth=getIntent().getExtras().getString("Tenth");
-        String other_eleventh=getIntent().getExtras().getString("Other_Eleventh");
+        //String other_eleventh=getIntent().getExtras().getString("Other_Eleventh");
         String eleventh=getIntent().getExtras().getString("Eleventh");
-        String other_twelvth=getIntent().getExtras().getString("Other_Twelvth");
+        //String other_twelvth=getIntent().getExtras().getString("Other_Twelvth");
         String twelvth=getIntent().getExtras().getString("Twelvth");
-        String other_thirteenth=getIntent().getExtras().getString("Other_Thirteenth");
+        //String other_thirteenth=getIntent().getExtras().getString("Other_Thirteenth");
         String thirteenth=getIntent().getExtras().getString("Thirteenth");
         if(rooms.getText().toString().matches("")){
             Toast.makeText(fourteenth.this, "Fill the number of rooms", Toast.LENGTH_LONG).show();
@@ -64,13 +64,13 @@ public class fourteenth extends ActionBarActivity implements OnClickListener{
             i.putExtra("Eighth",eighth);
             i.putExtra("Other_Ninth",other_ninth);
             i.putExtra("Ninth",ninth);
-            i.putExtra("Other_Tenth",other_tenth);
+            //i.putExtra("Other_Tenth",other_tenth);
             i.putExtra("Tenth",tenth);
-            i.putExtra("Other_Eleventh",other_eleventh);
+            //i.putExtra("Other_Eleventh",other_eleventh);
             i.putExtra("Eleventh",eleventh);
-            i.putExtra("Other_Twelvth",other_twelvth);
+            //i.putExtra("Other_Twelvth",other_twelvth);
             i.putExtra("Twelvth",twelvth);
-            i.putExtra("Other_Thirteenth",other_thirteenth);
+            //i.putExtra("Other_Thirteenth",other_thirteenth);
             i.putExtra("Thirteenth",thirteenth);
             i.putExtra("Rooms",rooms.getText().toString());
             startActivity(i);

@@ -43,16 +43,17 @@
         android:layout_height="wrap_content"
         android:id="@+id/radiogroup"
         android:layout_below="@id/description">
-    <RadioButton
+    <CheckBox
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Leakage/Seepage"
         android:textSize="15dp"
         android:id="@+id/option1"
         android:layout_below="@id/description"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:onClick="onCheckboxClicked"/>
 
-    <RadioButton
+    <CheckBox
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Drainage"
@@ -60,8 +61,8 @@
         android:id="@+id/option2"
         android:layout_below="@id/option1"
         android:layout_marginTop="7dp"
-        />
-    <RadioButton
+        android:onClick="onCheckboxClicked"/>
+    <CheckBox
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Poor Ventilation"
@@ -69,8 +70,8 @@
         android:id="@+id/option3"
         android:layout_below="@id/option2"
         android:layout_marginTop="7dp"
-        />
-    <RadioButton
+        android:onClick="onCheckboxClicked"/>
+    <CheckBox
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="No Sunlight"
@@ -78,8 +79,8 @@
         android:id="@+id/option4"
         android:layout_below="@id/option3"
         android:layout_marginTop="7dp"
-        />
-    <RadioButton
+        android:onClick="onCheckboxClicked"/>
+    <CheckBox
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="No Balcony/View"
@@ -87,8 +88,8 @@
         android:id="@+id/option5"
         android:layout_below="@id/option4"
         android:layout_marginTop="7dp"
-        />
-    <RadioButton
+        android:onClick="onCheckboxClicked"/>
+    <CheckBox
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="No Western Toilet"
@@ -96,8 +97,8 @@
         android:id="@+id/option6"
         android:layout_below="@id/option5"
         android:layout_marginTop="7dp"
-        />
-    <RadioButton
+        android:onClick="onCheckboxClicked"/>
+    <CheckBox
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Pests (Ants, cockroaches, bed - bugs"
@@ -105,8 +106,8 @@
         android:id="@+id/option7"
         android:layout_below="@id/option6"
         android:layout_marginTop="7dp"
-        />
-    <RadioButton
+        android:onClick="onCheckboxClicked"/>
+    <CheckBox
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="3rd/4th Floor, No Lifts"
@@ -114,9 +115,9 @@
         android:id="@+id/option9"
         android:layout_below="@id/option7"
         android:layout_marginTop="7dp"
-        />
+        android:onClick="onCheckboxClicked"/>
 
-    <RadioButton
+    <CheckBox
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Termites"
@@ -124,9 +125,9 @@
         android:id="@+id/option10"
         android:layout_below="@id/option9"
         android:layout_marginTop="7dp"
-        />
+        android:onClick="onCheckboxClicked"/>
 
-    <RadioButton
+    <CheckBox
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Flush not working"
@@ -134,8 +135,8 @@
         android:id="@+id/option11"
         android:layout_below="@id/option10"
         android:layout_marginTop="7dp"
-        />
-    <RadioButton
+        android:onClick="onCheckboxClicked"/>
+    <CheckBox
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Bad maintenance in case of PGs"
@@ -143,8 +144,8 @@
         android:id="@+id/option12"
         android:layout_below="@id/option11"
         android:layout_marginTop="7dp"
-        />
-    <RadioButton
+        android:onClick="onCheckboxClicked"/>
+    <CheckBox
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Bad food in case of PGs"
@@ -152,9 +153,9 @@
         android:id="@+id/option13"
         android:layout_below="@id/option12"
         android:layout_marginTop="7dp"
-        />
+        android:onClick="onCheckboxClicked"/>
 
-    <RadioButton
+    <CheckBox
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="None"
@@ -162,8 +163,8 @@
         android:id="@+id/option14"
         android:layout_below="@id/option13"
         android:layout_marginTop="7dp"
-        />
-    <RadioButton
+        android:onClick="onCheckboxClicked"/>
+    <CheckBox
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Other : "
@@ -171,11 +172,13 @@
         android:id="@+id/option15"
         android:layout_below="@id/option14"
         android:layout_marginTop="7dp"
-        />
+        android:onClick="onCheckboxClicked"/>
     </RadioGroup>
     <EditText
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
+        android:textSize="20dp"
+        android:background="@drawable/edittext"
         android:singleLine="true"
         android:visibility="invisible"
         android:layout_below="@id/radiogroup"
@@ -185,12 +188,39 @@
         android:layout_alignEnd="@id/option15"
         android:id="@+id/edittext"
         />
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+
+        android:padding="2pt"
+        android:layout_marginTop="0dp"
+        android:indeterminate="false"
+        android:max="18"
+        android:minHeight="50dp"
+        android:minWidth="200dp"
+        android:progress="13"
+        android:paddingBottom="0pt"
+        android:layout_below="@id/edittext"/>
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/progressBar1"
+        android:layout_below="@id/progressBar1"
+        android:text="13/18"
+        android:textSize="15dp"
+        android:paddingTop="0pt"
+        android:textColor="#0092ff"
+        android:padding="2pt"/>
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="NEXT"
         android:textSize="9pt"
-        android:layout_below="@id/edittext"
+        android:layout_below="@id/textView1"
         android:padding="2pt"
         android:textColor="#ff1ccc13"
         android:layout_alignParentBottom="true"

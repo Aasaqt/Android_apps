@@ -1,6 +1,7 @@
 package second.com.example.admin.survey;
 
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -17,9 +18,11 @@ public class MainActivity extends ActionBarActivity implements OnClickListener{
     private Button first;
     AlertDialog dia;
     EditText first_refree;
+    ProgressDialog progress;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
         first=(Button)findViewById(R.id.next);
         first_refree = (EditText) findViewById(R.id.name_refree);
@@ -39,6 +42,34 @@ public class MainActivity extends ActionBarActivity implements OnClickListener{
             dbl.addFirst(dblb);*/
             Intent i = new Intent(this, second.class);
             i.putExtra("Name_Refree",first_refree.getText().toString());
+            /*progress = new ProgressDialog(this);
+            progress.setMessage("Downloading Music");
+            progress.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+            progress.setIndeterminate(true);
+            progress.setProgress(0);
+            progress.show();
+
+            final int totalProgressTime = 18;
+            final Thread t = new Thread() {
+                @Override
+                public void run() {
+                    int jumpTime = 0;
+
+                    while(jumpTime < totalProgressTime) {
+                        try {
+                            sleep(5000);
+                            jumpTime += 1;
+                            progress.setProgress(jumpTime);
+                        }
+                        catch (InterruptedException e) {
+                            // TODO Auto-generated catch block
+                            e.printStackTrace();
+                        }
+                    }
+                }
+            };
+            t.start();*/
+
             startActivity(i);
             finish();
         }
